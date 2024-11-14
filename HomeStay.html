@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta  charset="UTF-8">
+<title>HomeStay Form </title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<style>
+
+
+	input
+	{	
+		margin-top:2px;
+	}
+	label
+	{
+		font-weight:600;
+		font-size:20px;
+		padding : 10px;
+		margin-top:3px;
+	}
+	body 
+	{
+	     border : 2px solid black;
+	     border-radius : 2%;
+	     font-weight : 800;
+	    
+	}
+	#form1, #form2, #top{
+		position: relative;
+		top: 15%;
+	}
+   
+	.submit
+	{
+		font-size:20px;
+		padding:2px;
+		margin-left:20%;
+	}
+	
+	.submit:hover
+	{
+		background-color:aqua;
+	}
+	
+	
+</style>
+
+
+
+<body>
+	<nav class="nav-page">
+		<div class="logo">
+			<a href="#">VisitManipur</a>
+		</div>
+		<div class="local-time">
+			<p class="timetext">ON</p><p id="clock"></p>
+
+		</div>
+	</nav>
+	<p id="top"> Welcome to Home Stay Form </p>
+	
+	<form	onsubmit="return false()" id="form1">
+		<label id ="owner">Owner Name:  </label>
+		<input type="text" for="owner" placeholder="enter owner name "   required> <br>
+ 
+		<label id = "ownerphoto">Owner Photo:  </label>
+		<input type="file"   for = "ownerphoto" required> <br>
+		
+		
+		
+		<label id = "villname"> Village/town name:  </label>
+		<input type="text" for="villname" required> <br>
+		
+		<label id="disname"> District name:  </label>
+		<input type="text" for="disname" required> <br>
+		
+		<label id="stname"> State name:  </label>
+		<input type="text" for="stname"  required> <br>
+		
+		<label id="pin"> Pin Code:  </label>
+		<input type="digit" for="pin" required> <br>
+		
+		<label id="pnum"> Phone number1:  </label>
+		<input type="digit" for="pnum" required> <br>
+		
+		<label id="phnum2"> Phone number2:  </label>
+		<input type="digit" for="phnum2"  required> <br>
+		
+		<label id="em"> Email:  </label>
+		<input type="email" for="em" required> <br>
+		
+		<label id="anum"> Aadhar Card number:  </label>
+		<input type="digit" for="anum" required> <br>
+		
+		<label id="aimg"> Aadhar Card Image:  </label>
+		<input type="file" for="aimg" required> <br>
+		
+		<label id="vnum"> Voter Card number:  </label>
+		<input type="text" for="vnum" required> <br>
+		
+		<label id="vimg"> Voter Card Image:  </label>
+		<input type="file" for="vimg"  required> <br>
+		 
+		<label id="numroom"> Number of room available for rent:  </label>  
+		<input type="digit" for="numroom" placeholder="enter room availabel" required> <br>
+		
+		<label id = "rent"> Enter rent range per room:  </label> 
+		<input type="text" for="rent" placeholder ="enter rent range " required> <br>
+		
+		<label> Provide 5 photoes for enterior of room </label> <br>
+		<input type="file"  required> <br>
+		<input type="file"  required> <br>
+		<input type="file"  required> <br>
+		<input type="file"  required> <br>
+		<input type="file"  required> <br>
+		
+			<input type="button" value="Submit"	onclick="check()"	class="submit">
+	</form>
+	
+	
+	
+<form	action="index1.php" method="POST" id="form2">
+	<div	id="finalSubmit">
+		<h4>Final Check before submission.Once you submit you cannot change your detail </h4>
+		<div	class="basicDetail">
+			<div>	
+				<p>Name:<input	id="OwnerName" name="fname" /></p>
+				<p>Village/Town:<input	id="OwnerVillage" name="fTown"/></p>
+				<p>District:<input	id="OwnerDistrict" name="fdistrict"/></p>
+				<p>State:<input	id="OwnerState" name="fstate"/></p>
+				<p>Pin Code: <input id="OwnerPinCode" name="fpin" type="digit"/> </p>
+				
+			<div>
+			<div>
+					<img src=" " id="OwnerImage"	alt="Owner Image">
+					<input name="fownerimg" id="OwnerImage1"/>
+			</div>
+		</div>
+		<div>
+			<h4>Contact Details are: </h4>
+			<p>Mobile Number1:<input	id="OwnerMobile1" name="fmobile1"/></p>
+			<p>Mobile Number2:<input	id="OwnerMobile2" name="fmobile2" /></p>
+			<p>Email: <input	id="OwnerEmail" name="femail"/></p>
+		</div>
+		<div>
+			<h4>Document Details are: </h4>
+			<div>
+				<p>Aadhar number:<input	id="OwnerAadhar" name=" faadhar"/></p>
+				<img src=" " id="OwnerAadharImg"	alt="Owner Aadhar Card Image">
+				<input name="fowneraadharimg" id="OwnerAadharImg1"/>
+			</div>
+			<div>
+				<p>Voter Card Number:<input	id="OwnerVoter" name="fvoter"/></p>
+				<img src=" " id="OwnerVoterImg"	alt="Owner VoterCard Image">
+				<input name="fownervoterimg" id="OwnerVoterImg1"/>
+			</div>
+		</div>
+		<div>
+			<h4>Room Details are: </h4>
+			<p>Available room:<input	id="OwnerRooms"  name="froom"/></p>
+			<p>Charges per room:<input	type= "text" id="OwnerRoomCharge" name="froomcharge"/></p>
+			<div	class="Interior-Picture">
+				<img src=" " alt=" Room interior Image"	id="RoomImg1">
+				<input name="froomimg11" id="RoomImg11"/>
+				<img src=" " alt=" Room interior Image"	id="RoomImg2">
+				<input name="froomimg21" id="RoomImg21"/>
+				<img src=" " alt=" Room interior Image"	id="RoomImg3">
+				<input name="froomimg31" id="RoomImg31"/>
+				<img src=" " alt=" Room interior Image"	id="RoomImg4">
+				<input name="froomimg41" id="RoomImg41"/>
+				<img src=" " alt=" Room interior Image"	id="RoomImg5">
+				<input name="froomimg51" id="RoomImg51"/>
+			</div>
+		</div>
+			<button	onclick="Subfun()">Submit</button>
+		
+	</div>
+</form>	
+			<button	onclick="EditFun()"	id="Edit">Edit</button>
+			<script src="script1.js">  </script>
+			<script src="script.js"></script>
+</body>
+</html>

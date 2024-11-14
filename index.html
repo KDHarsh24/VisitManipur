@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Manipur</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="landing-page">
+        <div class="container-page">
+            <nav class="nav-page">
+                <div class="logo">
+                    <a href="#">VisitManipur</a>
+                </div>
+                <div class="local-time">
+                    <p class="timetext">ON</p><p id="clock"></p>
+
+                    <a class="sos" style="color: white; background-color: red; text-decoration: none; padding: 10px; border-radius: 5px; position: relative; top: -20px; margin-left: 10px" href="tel:100">SOS</a>
+                </div>
+            </nav>
+            <footer>
+                <p>Visit Manipur</p>
+                <p>IdeaThon Initiative</p>
+            </footer>
+            <div class="items-page">
+                <div class="item-page"><p class="imagegot" id="Loktak">Loktak</p></div>
+                <div class="item-page"><p class="imagegot" id="Kangla">Kangla</p></div>
+                <div class="item-page"><p class="imagegot" id="Ima">Ima</p></div>
+                <div class="item-page"><p class="imagegot" id="Iskon">Iskon</p></div>
+                <div class="item-page"><p class="imagegot" id="Mao">Mao</p></div>
+                <div class="item-page"><p class="imagegot" id="War">War Memorial</p></div>
+                <div class="item-page"><p class="imagegot" id="Museum">Museum</p></div>
+                <div class="item-page"><p class="imagegot" id="Deer">Sanghai</p></div>
+                <div class="item-page"><p class="imagegot" id="Dzoku">Dzoku</p></div>
+            </div>
+            <div class="preview-bg">
+                <img src="./1.jpg" alt="loktak" id="imagetag">
+            </div>
+        </div>
+    </div>
+    <div class="login-box">
+        <h2>Login</h2>
+        <form action="index.php" method="post">
+            <div class="user-box">
+                <h4>Travel Companion</h4>
+                <div class="radio-container">
+                    <label class="label labelc-1">
+                        <input name="travel" id="labelc-1" type="radio" class="radio" for="solo" value="solo"/>
+                        Solo
+                    </label>
+                    <label class="label labelc-2">
+                        <input name="travel" id="labelc-2" type="radio" class="radio" for="solo" value="couple"/>
+                        Couple
+                    </label>
+                    <label class="label labelc-3">
+                        <input name="travel" id="labelc-3" type="radio" class="radio" for="solo" value="family"/>
+                        Family
+                    </label>
+                    <label class="label labelc-4">
+                    <input name="travel" id="labelc-4" type="radio" class="radio" for="solo" value="friends"/>
+                        Friends
+                    </label>
+                </div>
+            </div>
+            <div class="user-box">
+                <h4>Budget</h4>
+                <div class="radio-container">
+                    <label class="label labelc-1">
+                        <input name="budget" id="labelb-1" type="radio" class="radio" for="solo" value="low"/>
+                        Affordable
+                    </label>
+                    <label class="label labelc-2">
+                        <input name="budget" id="labelb-2" type="radio" class="radio" for="solo" value="mid"/>
+                        Leisure
+                    </label>
+                    <label class="label labelc-3">
+                        <input name="budget" id="labelb-3" type="radio" class="radio" for="solo" value="high"/>
+                        Luxury
+                    </label>
+                </div>
+            </div>
+            <div class="user-box">
+                <label for="arrivaldate" class="datelabel">Arrival Date:
+                    <input type="date" id="appd" name="arrivaldate"/>
+                </label>
+                <label for="arrivaltime" class="datelabel">Arrival Time:
+                    <input type="time" id="appt" name="arrivaltime"/>
+                </label>
+            </div>
+            <div class="user-box">
+                <label for="deptdate" class="datelabel">Departure Date:
+                    <input type="date" id="depd" name="deptdate"/>
+                </label>
+            </div>
+            <label class="subbut">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            <input type="submit" value="Submit" class="submitbutton"/>
+            </label>
+        </form>
+        <a href="./HomeStay.html"><button style="margin-left: 90%;">Home Stay</button></a>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
